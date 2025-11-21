@@ -43,10 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function spawnHeart(x, y) {
-  const hearts = ["💖", "💗", "💓", "💝", "💘", "💕", "💞", "💟"];
   const heart = document.createElement("span");
   heart.className = "heart";
-  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+  heart.textContent = "❤️";
   heart.style.left = x + "px";
   heart.style.top = y + "px";
   heart.style.fontSize = `${Math.random() * 10 + 20}px`; // Random size between 20-30px
