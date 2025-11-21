@@ -1,17 +1,11 @@
 {
-  "name": "date-invitation",
+  "name": "question-for-you",
   "version": "1.0.0",
-  "description": "A romantic date invitation website",
+  "private": true,
   "scripts": {
-    "start": "echo 'This is a static site. No server-side code is required.'"
+    "start": "echo 'This is a static site'"
   },
   "engines": {
-    "node": ">=14.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/date-invitation.git"
-  },
-  "author": "",
-  "license": "MIT"
+    "node": ">=16.0.0"
+  }
 }

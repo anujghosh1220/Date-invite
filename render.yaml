@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: date-invitation
+    name: question-for-you
     env: static
     buildCommand: ""
     staticPublishPath: "."
