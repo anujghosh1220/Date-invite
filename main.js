@@ -151,8 +151,11 @@ function handleClick(isObvious, evt) {
   // Change the image to oh-yay.gif
   const image = document.querySelector('.image-1');
   if (image) {
-    image.src = 'assets/oh-yay.gif';
+    // Use absolute path to ensure the image is found
+    const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
+    image.src = baseUrl + '/assets/oh-yay.gif';
     image.alt = 'yay';
+    console.log('Image source set to:', image.src); // For debugging
   }
   
   // Create a burst of hearts at the click position
