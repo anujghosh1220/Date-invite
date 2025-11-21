@@ -148,6 +148,13 @@ function revealMessages(isObvious) {
 }
 
 function handleClick(isObvious, evt) {
+  // Change the image to oh-yay.gif
+  const image = document.querySelector('.image-1');
+  if (image) {
+    image.src = 'assets/oh-yay.gif';
+    image.alt = 'yay';
+  }
+  
   // Create a burst of hearts at the click position
   for (let i = 0; i < 5; i++) {
     setTimeout(() => {
@@ -164,8 +171,8 @@ function handleClick(isObvious, evt) {
   // Add a ripple effect
   const ripple = document.createElement('div');
   ripple.className = 'ripple';
-  ripple.style.left = `${x}px`;
-  ripple.style.top = `${y}px`;
+  ripple.style.left = `${evt.clientX}px`;
+  ripple.style.top = `${evt.clientY}px`;
   document.body.appendChild(ripple);
   setTimeout(() => ripple.remove(), 1000);
   
