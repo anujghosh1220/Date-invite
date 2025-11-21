@@ -15,7 +15,7 @@ function createFloatingHearts() {
   for (let i = 0; i < heartCount; i++) {
     const heart = document.createElement("div");
     heart.className = "floating-heart";
-    heart.textContent = ["💖", "💗", "💓", "💝", "💘", "💕", "💞", "💟"][i % 8];
+    heart.textContent = "❤️";
     heart.style.animationDelay = `${Math.random() * 10}s`;
     heart.style.left = `${Math.random() * 100}%`;
     heart.style.top = `${Math.random() * 100}%`;
@@ -148,6 +148,17 @@ function revealMessages(isObvious) {
 }
 
 function handleClick(isObvious, evt) {
+  // Fade out the question text
+  const questionText = document.querySelector('.card-text');
+  if (questionText) {
+    questionText.style.transition = 'opacity 0.5s ease-out';
+    questionText.style.opacity = '0';
+    // Remove from layout after animation completes
+    setTimeout(() => {
+      questionText.style.display = 'none';
+    }, 500);
+  }
+  
   // Change the image to oh-yay.gif
   const image = document.querySelector('.image-1');
   if (image) {
@@ -155,7 +166,6 @@ function handleClick(isObvious, evt) {
     const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
     image.src = baseUrl + '/assets/oh-yay.gif';
     image.alt = 'yay';
-    console.log('Image source set to:', image.src); // For debugging
   }
   
   // Create a burst of hearts at the click position
