@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: date-invitation
+    env: static
+    buildCommand: ""
+    staticPublishPath: "."
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"

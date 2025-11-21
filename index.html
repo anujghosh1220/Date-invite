@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <title>Ask For Date</title>
+    <title>Date Invite</title>
   </head>
   <body>
-    <img src="assets/date.png" alt="date?" class="header-img" />
+    <div class="heart-bg">❤️</div>
     <div class="container" id="container">
-      <img src="assets/erm-fingers.gif" alt="please" class="image-1" />
-      <img src="assets/oh-yay.gif" alt="yes" class="image-2 hide" />
-      <button class="btn btn-yes">Yes</button>
-      <button class="btn btn-no">No</button>
+      <div class="title">A small question for <br>my favourite girl…</div>
+      <div class="card" id="card">
+        <img src="assets/erm-fingers.gif" alt="please" class="image-1" />
+        <div class="card-text">Will you go on a date with me?</div>
+        <div class="buttons">
+          <button class="btn btn-yes" id="btnYes">YES</button>
+          <button class="btn btn-obvious" id="btnObvious">OBVIOUSLY YES</button>
+        </div>
+        <div class="messages">
+          <div class="line" id="line1">I knew it…</div>
+          <div class="line" id="line2">Now I owe you a perfect date.</div>
+          <div class="line" id="line3">Pick the day. I’ll handle everything else.</div>
+          <div class="special" id="special">You chose the right answer <span class="wink">😉</span></div>
+          <div class="footer-emoji" id="footerEmoji">💗 ✨</div>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
