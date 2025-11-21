@@ -149,16 +149,13 @@ function revealMessages(isObvious) {
 }
 
 function handleClick(isObvious, evt) {
-  const x = evt.clientX;
-  const y = evt.clientY;
-  
-  // Create multiple hearts at the click position
+  // Create a burst of hearts at the click position
   for (let i = 0; i < 5; i++) {
     setTimeout(() => {
-      spawnHeart(
-        x + (Math.random() - 0.5) * 100,
-        y + (Math.random() - 0.5) * 100
-      );
+      // Spread hearts around the click position
+      const offsetX = (Math.random() - 0.5) * 100;
+      const offsetY = (Math.random() - 0.5) * 100;
+      spawnHeart(evt.clientX + offsetX, evt.clientY + offsetY);
     }, i * 100);
   }
   
